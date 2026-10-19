@@ -232,7 +232,10 @@ export function WelcomeWizard({
               role="img"
               aria-label="T3 Code"
             >
-              <T3Wordmark className="h-[round(1cap,1px)] w-auto shrink-0" aria-hidden />
+              <T3Wordmark
+                className="h-[1cap] w-auto shrink-0 supports-[height:round(1cap,1px)]:h-[round(1cap,1px)]"
+                aria-hidden
+              />
               <span className="text-muted-foreground">Code</span>
             </div>
           }

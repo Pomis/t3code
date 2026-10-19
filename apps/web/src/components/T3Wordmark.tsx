@@ -1,12 +1,8 @@
 import type { SVGProps } from "react";
 
 export function T3Wordmark(props: SVGProps<SVGSVGElement>) {
-  // The viewBox ends at the T's baseline (y=93), so the box is exactly one cap
-  // height and baseline alignment lands on the T's foot. The 3's bowl
-  // overshoots below it like any round glyph, hence overflow="visible".
-  // Next to text, size it with round(1cap,1px): Chromium snaps an SVG's top
-  // edge to the pixel grid but keeps a fractional height, so a fractional
-  // height leaves the foot up to a device pixel off the snapped text baseline.
+  // End at the T's baseline (y=93); let the 3's bowl overshoot.
+  // Round cap-height sizing beside text to avoid fractional SVG baseline drift.
   return (
     <svg
       {...props}
